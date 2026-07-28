@@ -49,7 +49,7 @@ public class RedisSession {
 
     private CheckerConfig config;
 
-    private int commandTimeOut = Integer.parseInt(System.getProperty(KEY_REDISSESSION_COMMAND_TIMEOUT, String.valueOf(AbstractRedisCommand.DEFAULT_REDIS_COMMAND_TIME_OUT_MILLI)));
+    private int commandTimeOut = Integer.parseInt(System.getProperty(KEY_REDISSESSION_COMMAND_TIMEOUT, "2000"));
 
     public RedisSession(Endpoint endpoint, ScheduledExecutorService scheduled,
                         XpipeNettyClientKeyedObjectPool keyedObjectPool, CheckerConfig config) {
